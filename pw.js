@@ -53,7 +53,10 @@ navigator.bluetooth.addEventListener('advertisementreceived', event => {
 
 var scan
 function startscan () {
-  navigator.bluetooth.requestLEScan({filters:
+  navigator.bluetooth.requestLEScan({
+    acceptAllDevices: true,
+  optionalServices: ['battery_service'],
+    filters:
             [{services: [pw_service_uuid]}]}).then(function (result) {
     scan = result
   })
