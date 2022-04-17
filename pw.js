@@ -1,5 +1,5 @@
 
-const pw_service_uuid = '0000feaa-0000-1000-8000-00805f9b34fb'
+const pw_service_uuid = '982b40c0-edc7-4b16-8c2e-7bf714ae4409'
 
 navigator.bluetooth.addEventListener('advertisementreceived', event => {
   // https://github.com/google/eddystone/tree/master/eddystone-url
