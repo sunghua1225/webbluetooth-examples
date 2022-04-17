@@ -1,5 +1,5 @@
 
-const pw_service_uuid = '982b40c0-edc7-4b16-8c2e-7bf714ae4409'
+const pw_service_uuid = '002C00'
 
 navigator.bluetooth.addEventListener('advertisementreceived', event => {
   // https://github.com/google/eddystone/tree/master/eddystone-url
@@ -54,8 +54,6 @@ navigator.bluetooth.addEventListener('advertisementreceived', event => {
 var scan
 function startscan () {
   navigator.bluetooth.requestLEScan({
-    acceptAllDevices: true,
-  optionalServices: ['battery_service'],
     filters:
             [{services: [pw_service_uuid]}]}).then(function (result) {
     scan = result
